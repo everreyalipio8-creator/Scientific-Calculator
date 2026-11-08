@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #101827, #263b59);
+}
+
+.calculator {
+    width: 100%;
+    max-width: 430px;
+    background: #182436;
+    padding: 22px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    font-size: 20px;
+}
+
+#mode {
+    background: #00b894;
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.display {
+    background: #0c1523;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: right;
+    overflow: hidden;
+}
+
+#expression {
+    color: #9baac0;
+    min-height: 25px;
+    overflow-wrap: anywhere;
+}
+
+#result {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #00e6a0;
+    font-size: 32px;
+    text-align: right;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 9px;
+}
+
+.buttons button {
+    min-width: 0;
+    height: 52px;
+    border: none;
+    border-radius: 10px;
+    background: #293a51;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    background: #405673;
+    transform: translateY(-2px);
+}
+
+.buttons .special {
+    background: #52647d;
+}
+
+.buttons .operator {
+    background: #087e83;
+    font-size: 21px;
+}
+
+.buttons .equal {
+    background: #00a878;
+    font-size: 22px;
+}
+
+.history {
+    margin-top: 22px;
+    color: white;
+}
+
+.history h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#history {
+    list-style: none;
+    max-height: 130px;
+    overflow-y: auto;
+    color: #b7c6d9;
+    font-size: 13px;
+}
+
+#history li {
+    padding: 8px;
+    border-bottom: 1px solid #34465d;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 380px) {
+    .calculator {
+        padding: 14px;
+    }
+
+    .buttons {
+        gap: 6px;
+    }
+
+    .buttons button {
+        height: 46px;
+        font-size: 14px;
+    }
+}
